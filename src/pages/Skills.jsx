@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -41,14 +43,16 @@ const Skills = () => {
   const npmPackages = [
     {
       name: "mbqueue",
-      description: "A lightweight and efficient message queue system for Node.js applications. Simplifies async tasks and background processing.",
+      description:
+        "A lightweight and efficient message queue system for Node.js applications. Simplifies async tasks and background processing.",
       version: "1.0.0",
       downloads: "500+",
       link: "https://www.npmjs.com/package/mbqueue"
     },
     {
       name: "@manoj2002/cobit",
-      description: "A powerful CLI tool and web app for storing, organizing, and reusing code snippets across projects.",
+      description:
+        "A powerful CLI tool and web app for storing, organizing, and reusing code snippets across projects.",
       version: "2.1.0",
       downloads: "1.2K+",
       link: "https://www.npmjs.com/package/@manoj2002/cobit"
@@ -57,6 +61,19 @@ const Skills = () => {
 
   return (
     <div className="section">
+      <Helmet>
+        <title>Skills & Expertise | Manoj Gowda</title>
+        <meta
+          name="description"
+          content="Explore Manoj Gowda's technical skills in frontend, backend, databases, DevOps, and cloud. Includes open-source npm packages like mbqueue and cobit."
+        />
+        <meta
+          name="keywords"
+          content="Manoj Gowda, skills, expertise, JavaScript, React, Node.js, MERN stack, developer, full stack developer, mbqueue, cobit, npm packages, DevOps, Docker, AWS"
+        />
+        <meta name="author" content="Manoj Gowda" />
+      </Helmet>
+
       <div className="container">
         <div className="fade-in">
           <div className="section-header">
@@ -78,11 +95,11 @@ const Skills = () => {
                       key={skillIndex}
                       className="skill-badge"
                       style={{
-                        '--skill-color': skill.color,
+                        "--skill-color": skill.color,
                         animationDelay: `${skillIndex * 0.1}s`
                       }}
                     >
-                      <div 
+                      <div
                         className="skill-dot"
                         style={{ backgroundColor: skill.color }}
                       ></div>
@@ -105,14 +122,16 @@ const Skills = () => {
                     <h3 className="package-name">{pkg.name}</h3>
                     <div className="package-stats">
                       <span className="package-version">v{pkg.version}</span>
-                      <span className="package-downloads">{pkg.downloads} downloads</span>
+                      <span className="package-downloads">
+                        {pkg.downloads} downloads
+                      </span>
                     </div>
                   </div>
                   <p className="package-description">{pkg.description}</p>
                   <div className="package-actions">
-                    <a 
-                      href={pkg.link} 
-                      target="_blank" 
+                    <a
+                      href={pkg.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-primary"
                     >

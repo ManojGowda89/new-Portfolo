@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 const Projects = () => {
   const projects = [
     {
@@ -48,6 +49,20 @@ const Projects = () => {
 
   return (
     <div className="section">
+      <Helmet>
+        <title>Projects | Manoj Gowda - Full Stack Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Explore Manoj Gowda's portfolio projects including walletExpress (crypto wallet generator), Cobit (code snippet manager), SkoCloud (cloud storage), and VMarg (IoT platform)."
+        />
+        <meta
+          name="keywords"
+          content="Manoj Gowda, portfolio, projects, walletExpress, Cobit, SkoCloud, VMarg, crypto wallet generator, cloud storage, IoT platform, web developer, full stack developer, MERN stack, frontend developer, backend developer, DevOps engineer"
+        />
+        <meta name="author" content="Manoj Gowda" />
+        <link rel="canonical" href="https://manojgowda.in/projects" />
+      </Helmet>
+
       <div className="container">
         <div className="fade-in">
           <div className="section-header">

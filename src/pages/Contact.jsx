@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,6 +61,22 @@ const Contact = () => {
 
   return (
     <div className="section">
+      {/* ✅ SEO Helmet */}
+     <Helmet>
+  <title>Contact Manoj Gowda | Full Stack Developer & DevOps Engineer</title>
+  <meta
+    name="description"
+    content="Manoj Gowda's personal website showcasing projects, skills, and contact information. Get in touch with Manoj Gowda - Full Stack Developer, MERN Specialist, and DevOps Engineer."
+  />
+  <meta
+    name="keywords"
+    content="Manoj Gowda, manoj, manoj gowda instagram, manoj gowda profile, manojgowda, developer, software engineer, full stack developer, MERN stack, JavaScript, React, Node.js, manojgowda.in, portfolio, projects, contact"
+  />
+  <meta name="author" content="Manoj Gowda" />
+  <link rel="canonical" href="https://manojgowda.in/contact" />
+</Helmet>
+
+
       <div className="container">
         <div className="fade-in">
           <div className="section-header">
@@ -72,6 +89,7 @@ const Contact = () => {
           </div>
 
           <div className="contact-grid grid grid-2">
+            {/* Contact Info */}
             <div className="contact-info-section">
               <div className="card">
                 <h3 className="card-title">Let's Connect</h3>
@@ -111,6 +129,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Contact Form */}
             <div className="contact-form-section">
               <div className="card">
                 <h3 className="card-title">Send Message</h3>

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 const Experience = () => {
   const experiences = [
     {
@@ -40,7 +42,10 @@ const Experience = () => {
         "Started with static sites and scaled to fully dynamic applications",
         "Handled full lifecycle: UI/UX design, development, DevOps, and deployment"
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB", "Docker", "AWS", "CI/CD"]
+      technologies: [
+        "HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB",
+        "Docker", "AWS", "CI/CD"
+      ]
     }
   ];
 
@@ -56,6 +61,20 @@ const Experience = () => {
 
   return (
     <div className="section">
+      <Helmet>
+        <title>Experience | Manoj Gowda - Full Stack Developer & DevOps Engineer</title>
+        <meta
+          name="description"
+          content="Explore the professional experience of Manoj Gowda, a Full Stack Developer and DevOps Engineer specializing in MERN stack, IoT systems, fintech, and cloud solutions."
+        />
+        <meta
+          name="keywords"
+          content="Manoj Gowda, full stack developer, frontend developer, backend developer, DevOps engineer, MERN stack, JavaScript developer, Node.js, React, IoT developer, fintech engineer, software engineer, manojgowda.in"
+        />
+        <meta name="author" content="Manoj Gowda" />
+        <link rel="canonical" href="https://manojgowda.in/experience" />
+      </Helmet>
+
       <div className="container">
         <div className="fade-in">
           <div className="section-header">
@@ -77,7 +96,9 @@ const Experience = () => {
                   <div className="experience-header">
                     <div className="experience-main">
                       <h3 className="experience-role">{exp.role}</h3>
-                      <h4 className="experience-company gradient-text">{exp.company}</h4>
+                      <h4 className="experience-company gradient-text">
+                        {exp.company}
+                      </h4>
                     </div>
                     <div className="experience-meta">
                       <span className="experience-period">{exp.period}</span>
@@ -86,7 +107,7 @@ const Experience = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="experience-achievements">
                     <h5>Key Achievements:</h5>
                     <ul>
@@ -118,7 +139,9 @@ const Experience = () => {
             <div className="card">
               <div className="education-header">
                 <h3 className="education-degree">{education.degree}</h3>
-                <h4 className="education-institution gradient-text">{education.institution}</h4>
+                <h4 className="education-institution gradient-text">
+                  {education.institution}
+                </h4>
               </div>
               <div className="education-achievements">
                 <h5>Highlights:</h5>

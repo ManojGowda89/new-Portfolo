@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -29,6 +29,30 @@ function PermissionRedirect({ to }) {
       ) : (
         <p>Redirected! You can close this tab.</p>
       )}
+    </div>
+  );
+}
+
+// Component that downloads resume from /public
+function ResumeDownload() {
+  useEffect(() => {
+    const link = document.createElement("a");
+    link.href = "/manojgowda.in.pdf"; // file must be inside /public
+    link.download = "manojgowda.in.pdf"; // suggested filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, []);
+
+  return (
+    <div style={{ padding: "2rem", textAlign: "center" }}>
+      <p>
+        Downloading resume... <br />
+        If it doesn’t start automatically,{" "}
+        <a href="/manojgowda.in.pdf" download>
+          click here
+        </a>.
+      </p>
     </div>
   );
 }
@@ -66,8 +90,10 @@ function App() {
             <Route path="/github" element={<PermissionRedirect to="https://github.com/ManojGowda89" />} />
             <Route path="/linkedin" element={<PermissionRedirect to="https://www.linkedin.com/in/manojgowdabr89/" />} />
             <Route path="/whatsapp" element={<PermissionRedirect to="https://wa.me/9513849323" />} />
-            <Route path="/resume" element={<PermissionRedirect to="https://manojgowda.in/manojgowda.in.pdf" />} />
             <Route path="/instagram" element={<PermissionRedirect to="https://www.instagram.com/manoj_gowda_89/" />} />
+
+            {/* Resume download (local file from /public) */}
+            <Route path="/resume" element={<ResumeDownload />} />
           </Routes>
         </main>
       </div>
