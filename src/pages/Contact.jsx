@@ -27,7 +27,7 @@ const Contact = () => {
 
     try {
       const authString = btoa(`${email}:${name}|${subject}|${message}`);
-      const response = await axios.get('http://localhost:5000/contact', {
+      const response = await axios.get('https://api-email.manojgowda.in/contact', {
         headers: { Authorization: `Basic ${authString}` }
       });
 
