@@ -33,26 +33,5 @@
     <changefreq>yearly</changefreq>
   </url>
 
-  <!-- External Links (still useful if you want crawlers to discover them) -->
-  <url>
-    <loc>https://github.com/ManojGowda89</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.linkedin.com/in/manojgowdabr89/</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://wa.me/9513849323</loc>
-    <priority>0.6</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://www.instagram.com/manoj_gowda_89/</loc>
-    <priority>0.5</priority>
-    <changefreq>weekly</changefreq>
-  </url>
 
 </urlset>
