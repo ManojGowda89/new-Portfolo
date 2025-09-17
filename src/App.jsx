@@ -11,6 +11,8 @@ import Github from "./pages/Links/Github";
 import Linkedin from "./pages/Links/Linkedin";
 import Whatsapp from "./pages/Links/Whatsapp";
 import Instagram from "./pages/Links/Instagram";
+import Blogs from "./pages/Blogs";
+import BlogDetail from "./pages/BlogDetail";
 // Component for confirmation before redirecting
 function PermissionRedirect({ to }) {
   const [showButton, setShowButton] = useState(true);
@@ -92,6 +94,8 @@ function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:id" element={<BlogDetail />} />
 
             {/* External links with permission */}
             <Route path="/github" element={<Github />} />

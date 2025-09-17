@@ -10,6 +10,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     { path: '/skills', label: 'Skills' },
     { path: '/experience', label: 'Experience' },
     { path: '/projects', label: 'Projects' },
+    { path: '/blogs', label: 'Blogs' },
     { path: '/contact', label: 'Contact' }
   ];
 
