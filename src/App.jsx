@@ -19,7 +19,7 @@ const Github = lazy(() => import("./pages/Links/Github"));
 const Linkedin = lazy(() => import("./pages/Links/Linkedin"));
 const Whatsapp = lazy(() => import("./pages/Links/Whatsapp"));
 const Instagram = lazy(() => import("./pages/Links/Instagram"));
-
+const Mbqueue = lazy(() => import("./pages/mbqueue"));
 // Component that downloads resume from /public
 function ResumeDownload() {
   useEffect(() => {
@@ -93,6 +93,8 @@ function App() {
         { path: "whatsapp", element: <Whatsapp /> },
         { path: "instagram", element: <Instagram /> },
         { path: "resume", element: <ResumeDownload /> },
+        { path: "mbqueue", element: <Mbqueue /> }, // Temporary placeholder for mbqueue page
+
         {
           path: "*",
           element: (
