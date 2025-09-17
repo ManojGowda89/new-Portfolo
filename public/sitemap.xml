@@ -27,11 +27,22 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+
+  <!-- External Link Pages -->
   <url>
-    <loc>https://manojgowda.in/resume</loc>
+    <loc>https://manojgowda.in/github</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
-
+  <url>
+    <loc>https://manojgowda.in/linkedin</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://manojgowda.in/instagram</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
 </urlset>

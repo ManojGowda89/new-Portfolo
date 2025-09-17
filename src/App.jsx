@@ -1,28 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Skills from './pages/Skills';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
-import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import "./App.css";
+import Github from "./pages/Links/Github";
+import Linkedin from "./pages/Links/Linkedin";
+import Whatsapp from "./pages/Links/Whatsapp";
+import Instagram from "./pages/Links/Instagram";
 // Component for confirmation before redirecting
 function PermissionRedirect({ to }) {
   const [showButton, setShowButton] = useState(true);
 
   const handleRedirect = () => {
-    window.open(to, '_blank'); // open in new tab
+    window.open(to, "_blank"); // open in new tab
     setShowButton(false);
   };
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
+    <div style={{ padding: "2rem", textAlign: "center" }}>
       {showButton ? (
         <>
           <p>Click the button below to visit the external link:</p>
-          <button onClick={handleRedirect} style={{ padding: '0.5rem 1rem', cursor: 'pointer' }}>
+          <button
+            onClick={handleRedirect}
+            style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
+          >
             Go to Link
           </button>
         </>
@@ -51,26 +57,27 @@ function ResumeDownload() {
         If it doesn’t start automatically,{" "}
         <a href="/manojgowda.in.pdf" download>
           click here
-        </a>.
+        </a>
+        .
       </p>
     </div>
   );
 }
 
 function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem("theme") || "dark";
     setTheme(savedTheme);
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
   };
 
   return (
@@ -87,12 +94,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             {/* External links with permission */}
-            <Route path="/github" element={<PermissionRedirect to="https://github.com/ManojGowda89" />} />
-            <Route path="/linkedin" element={<PermissionRedirect to="https://www.linkedin.com/in/manojgowdabr89/" />} />
-            <Route path="/whatsapp" element={<PermissionRedirect to="https://wa.me/9513849323" />} />
-            <Route path="/instagram" element={<PermissionRedirect to="https://www.instagram.com/manoj_gowda_89/" />} />
-
-            {/* Resume download (local file from /public) */}
+            <Route path="/github" element={<Github />} />
+            <Route path="/linkedin" element={<Linkedin />} />
+            <Route path="/whatsapp" element={<Whatsapp />} />
+            <Route path="/instagram" element={<Instagram />} />
             <Route path="/resume" element={<ResumeDownload />} />
           </Routes>
         </main>
