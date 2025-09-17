@@ -32,15 +32,43 @@ export default function Instagram() {
       }}
     >
       <Helmet>
-        <title>Manoj Gowda | Instagram Profile</title>
+        <title>
+          Manoj Gowda | Instagram Profile - Full Stack Developer & DevOps
+          Engineer
+        </title>
         <meta
           name="description"
-          content="View Manoj Gowda's Instagram profile and updates."
+          content="Follow Manoj Gowda on Instagram – Full Stack Developer & DevOps Engineer from Bengaluru, India. Explore MERN stack projects, IoT innovations, fintech apps, and personal updates."
         />
+        <meta
+          name="keywords"
+          content="
+      Manoj Gowda Instagram, Instagram Manoj Gowda, Manoj Gowda profile Instagram,
+      Manoj Gowda developer Instagram, Full Stack Developer Instagram, MERN Stack Instagram,
+      IoT Engineer Instagram, DevOps Engineer Instagram, Fintech Developer Instagram,
+      Software Engineer Instagram, React Developer Instagram, Node.js Instagram,
+      MongoDB Instagram, Cloud Engineer Instagram, Bangalore Instagram Developer,
+      Bengaluru Instagram Tech, manojgowda.in Instagram
+    "
+        />
+        <meta name="author" content="Manoj Gowda" />
+        <link rel="canonical" href="https://manojgowda.in/instagram" />
+
+        {/* Open Graph (for LinkedIn/FB/WhatsApp sharing) */}
         <meta property="og:title" content="Manoj Gowda | Instagram Profile" />
         <meta
           property="og:description"
-          content="Follow Manoj Gowda on Instagram for updates, projects, and more."
+          content="Discover Instagram updates from Manoj Gowda – MERN stack developer, IoT enthusiast, fintech software engineer, and DevOps specialist."
+        />
+        <meta property="og:url" content="https://manojgowda.in/instagram" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card (for better preview on X/Twitter) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Manoj Gowda | Instagram Profile" />
+        <meta
+          name="twitter:description"
+          content="Follow Manoj Gowda on Instagram for project updates, IoT innovations, fintech apps, and developer insights."
         />
       </Helmet>
 

@@ -12,9 +12,16 @@ const Experience = () => {
         "Developed secure APIs for IoT hardware devices handling real-time data",
         "Architected Event-Driven Dynamic MQTT Delivery (EDDMD) for instant updates",
         "Designed scalable systems handling 100,000+ devices per instance daily",
-        "Deployed solutions on AWS using Docker and GitHub Actions CI/CD"
+        "Deployed solutions on AWS using Docker and GitHub Actions CI/CD",
       ],
-      technologies: ["Node.js", "MQTT", "AWS", "Docker", "IoT", "Real-time Systems"]
+      technologies: [
+        "Node.js",
+        "MQTT",
+        "AWS",
+        "Docker",
+        "IoT",
+        "Real-time Systems",
+      ],
     },
     {
       company: "Trans-Fi India Pvt Ltd",
@@ -26,9 +33,16 @@ const Experience = () => {
         "Built automated crypto price fetching system from multiple platforms",
         "Designed REST APIs for secure trading operations",
         "Engineered monitoring systems for payment method optimization",
-        "Worked with fintech security protocols and compliance"
+        "Worked with fintech security protocols and compliance",
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Cryptocurrency APIs", "FinTech"]
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Cryptocurrency APIs",
+        "FinTech",
+      ],
     },
     {
       company: "Freelance Projects",
@@ -40,13 +54,21 @@ const Experience = () => {
         "Completed 10+ projects from design to deployment",
         "Deployed 20+ websites and web applications",
         "Started with static sites and scaled to fully dynamic applications",
-        "Handled full lifecycle: UI/UX design, development, DevOps, and deployment"
+        "Handled full lifecycle: UI/UX design, development, DevOps, and deployment",
       ],
       technologies: [
-        "HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB",
-        "Docker", "AWS", "CI/CD"
-      ]
-    }
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Docker",
+        "AWS",
+        "CI/CD",
+      ],
+    },
   ];
 
   const education = {
@@ -55,24 +77,56 @@ const Experience = () => {
     achievements: [
       "Participated in inter-college project competitions",
       "Developed innovative projects including KissanBazaar and Car Profile APIs",
-      "Strong foundation in computer science fundamentals"
-    ]
+      "Strong foundation in computer science fundamentals",
+    ],
   };
 
   return (
     <div className="section">
       <Helmet>
-        <title>Experience | Manoj Gowda - Full Stack Developer & DevOps Engineer</title>
+        <title>
+          Experience | Manoj Gowda - Full Stack Developer, MERN Specialist &
+          DevOps Engineer
+        </title>
         <meta
           name="description"
-          content="Explore the professional experience of Manoj Gowda, a Full Stack Developer and DevOps Engineer specializing in MERN stack, IoT systems, fintech, and cloud solutions."
+          content="Discover Manoj Gowda's professional experience as a Full Stack Developer and DevOps Engineer. Skilled in MERN stack, JavaScript, IoT systems, fintech development, and cloud solutions with hands-on project delivery."
         />
         <meta
           name="keywords"
-          content="Manoj Gowda, full stack developer, frontend developer, backend developer, DevOps engineer, MERN stack, JavaScript developer, Node.js, React, IoT developer, fintech engineer, software engineer, manojgowda.in"
+          content="
+      Manoj Gowda, Experience Manoj Gowda, Manoj Gowda developer experience, 
+      Full Stack Developer experience, DevOps Engineer experience, MERN stack projects, 
+      JavaScript developer, React.js developer, Node.js developer, MongoDB, 
+      IoT developer experience, fintech developer, software engineer Bengaluru, 
+      cloud solutions engineer, portfolio experience Manoj Gowda, manojgowda.in
+    "
         />
         <meta name="author" content="Manoj Gowda" />
         <link rel="canonical" href="https://manojgowda.in/experience" />
+
+        {/* Open Graph (for LinkedIn/FB/WhatsApp sharing) */}
+        <meta
+          property="og:title"
+          content="Manoj Gowda | Experience - Full Stack Developer & DevOps Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Explore Manoj Gowda's journey as a Full Stack Developer and DevOps Engineer. Skilled in MERN, IoT, fintech, and cloud-based software development."
+        />
+        <meta property="og:url" content="https://manojgowda.in/experience" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card (for better preview on X/Twitter) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Experience | Manoj Gowda - Full Stack Developer & DevOps Engineer"
+        />
+        <meta
+          name="twitter:description"
+          content="View the professional experience of Manoj Gowda, a developer specializing in MERN stack, DevOps, IoT, fintech, and cloud solutions."
+        />
       </Helmet>
 
       <div className="container">
@@ -102,7 +156,9 @@ const Experience = () => {
                     </div>
                     <div className="experience-meta">
                       <span className="experience-period">{exp.period}</span>
-                      <span className={`experience-type ${exp.type.toLowerCase()}`}>
+                      <span
+                        className={`experience-type ${exp.type.toLowerCase()}`}
+                      >
                         {exp.type}
                       </span>
                     </div>

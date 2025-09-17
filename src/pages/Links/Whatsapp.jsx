@@ -32,15 +32,43 @@ export default function Whatsapp() {
       }}
     >
       <Helmet>
-        <title>Manoj Gowda | WhatsApp</title>
+        <title>
+          Manoj Gowda | WhatsApp Contact - Full Stack Developer & DevOps
+          Engineer
+        </title>
         <meta
           name="description"
-          content="Chat with Manoj Gowda directly on WhatsApp."
+          content="Chat with Manoj Gowda directly on WhatsApp. Full Stack Developer & DevOps Engineer from Bengaluru, India specializing in MERN stack, IoT, fintech, and cloud solutions."
         />
-        <meta property="og:title" content="Manoj Gowda | WhatsApp" />
+        <meta
+          name="keywords"
+          content="
+      Manoj Gowda WhatsApp, WhatsApp Manoj Gowda, contact Manoj Gowda WhatsApp,
+      Manoj Gowda developer WhatsApp, Full Stack Developer WhatsApp, MERN Stack WhatsApp,
+      IoT Engineer WhatsApp, DevOps Engineer WhatsApp, Fintech Developer WhatsApp,
+      Software Engineer WhatsApp, React Developer WhatsApp, Node.js WhatsApp,
+      MongoDB WhatsApp, Cloud Engineer WhatsApp, Bangalore WhatsApp Developer,
+      Bengaluru WhatsApp Tech, manojgowda.in WhatsApp
+    "
+        />
+        <meta name="author" content="Manoj Gowda" />
+        <link rel="canonical" href="https://manojgowda.in/whatsapp" />
+
+        {/* Open Graph (for WhatsApp/LinkedIn/FB sharing) */}
+        <meta property="og:title" content="Manoj Gowda | WhatsApp Contact" />
         <meta
           property="og:description"
-          content="Connect with Manoj Gowda instantly via WhatsApp."
+          content="Connect with Manoj Gowda instantly on WhatsApp – Full Stack Developer & DevOps Engineer specializing in MERN, IoT, fintech, and cloud solutions."
+        />
+        <meta property="og:url" content="https://manojgowda.in/whatsapp" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card (for X/Twitter preview) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Manoj Gowda | WhatsApp Contact" />
+        <meta
+          name="twitter:description"
+          content="Chat with Manoj Gowda via WhatsApp – MERN stack developer, DevOps engineer, and IoT enthusiast."
         />
       </Helmet>
 
@@ -53,7 +81,8 @@ export default function Whatsapp() {
         fill="white"
         style={{ marginBottom: "24px" }}
       >
-        <path d="M16.002 3c-7.167 0-13 5.832-13 12.998 
+        <path
+          d="M16.002 3c-7.167 0-13 5.832-13 12.998 
         0 2.291.605 4.523 1.75 6.5L3 29l6.668-1.715A12.9 
         12.9 0 0 0 16.002 29c7.167 0 13-5.832 
         13-12.998S23.169 3 16.002 3zm0 
@@ -66,7 +95,8 @@ export default function Whatsapp() {
         0-.57.082-.867.406s-1.137 1.11-1.137 2.707 1.164 3.145 
         1.324 3.363c.162.215 2.293 3.5 5.555 4.91.777.334 
         1.381.533 1.855.68.779.248 1.488.213 2.051.129.625-.094 
-        1.91-.781 2.18-1.535.27-.754.27-1.4.189-1.535-.08-.135-.297-.215-.621-.377z"/>
+        1.91-.781 2.18-1.535.27-.754.27-1.4.189-1.535-.08-.135-.297-.215-.621-.377z"
+        />
       </svg>
 
       <h1 style={{ fontSize: "28px", marginBottom: "16px" }}>

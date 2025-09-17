@@ -9,24 +9,24 @@ const Skills = () => {
         { name: "TypeScript", color: "#007ACC" },
         { name: "React", color: "#61DAFB" },
         { name: "React Native", color: "#61DAFB" },
-        { name: "Next.js", color: "#000000" }
-      ]
+        { name: "Next.js", color: "#000000" },
+      ],
     },
     {
       title: "Backend Technologies",
       skills: [
         { name: "Node.js", color: "#339933" },
         { name: "Express.js", color: "#000000" },
-        { name: "Python", color: "#3776AB" }
-      ]
+        { name: "Python", color: "#3776AB" },
+      ],
     },
     {
       title: "Databases",
       skills: [
         { name: "MongoDB", color: "#4EA94B" },
         { name: "PostgreSQL", color: "#316192" },
-        { name: "Firebase", color: "#FFCA28" }
-      ]
+        { name: "Firebase", color: "#FFCA28" },
+      ],
     },
     {
       title: "DevOps & Cloud",
@@ -35,9 +35,9 @@ const Skills = () => {
         { name: "AWS", color: "#232F3E" },
         { name: "Kubernetes", color: "#326CE5" },
         { name: "GitHub Actions", color: "#2088FF" },
-        { name: "Vercel", color: "#000000" }
-      ]
-    }
+        { name: "Vercel", color: "#000000" },
+      ],
+    },
   ];
 
   const npmPackages = [
@@ -47,7 +47,7 @@ const Skills = () => {
         "A lightweight and efficient message queue system for Node.js applications. Simplifies async tasks and background processing.",
       version: "1.0.0",
       downloads: "500+",
-      link: "https://www.npmjs.com/package/mbqueue"
+      link: "https://www.npmjs.com/package/mbqueue",
     },
     {
       name: "@manoj2002/cobit",
@@ -55,23 +55,55 @@ const Skills = () => {
         "A powerful CLI tool and web app for storing, organizing, and reusing code snippets across projects.",
       version: "2.1.0",
       downloads: "1.2K+",
-      link: "https://www.npmjs.com/package/@manoj2002/cobit"
-    }
+      link: "https://www.npmjs.com/package/@manoj2002/cobit",
+    },
   ];
 
   return (
     <div className="section">
       <Helmet>
-        <title>Skills & Expertise | Manoj Gowda</title>
+        <title>
+          Skills & Expertise | Manoj Gowda - Full Stack Developer & DevOps
+          Engineer
+        </title>
         <meta
           name="description"
-          content="Explore Manoj Gowda's technical skills in frontend, backend, databases, DevOps, and cloud. Includes open-source npm packages like mbqueue and cobit."
+          content="Explore Manoj Gowda's technical skills in frontend, backend, databases, DevOps, and cloud computing. Expertise includes JavaScript, React, Node.js, MERN stack, Docker, AWS, and open-source npm packages like mbqueue and cobit."
         />
         <meta
           name="keywords"
-          content="Manoj Gowda, skills, expertise, JavaScript, React, Node.js, MERN stack, developer, full stack developer, mbqueue, cobit, npm packages, DevOps, Docker, AWS"
+          content="
+      Manoj Gowda skills, Manoj Gowda expertise, full stack developer skills, MERN stack skills,
+      JavaScript developer, React developer, Node.js developer, MongoDB, Express.js, PostgreSQL,
+      DevOps skills, Docker, AWS, npm packages mbqueue, npm packages cobit, software engineer,
+      IoT developer, fintech developer, cloud solutions, Bengaluru developer, manojgowda.in
+    "
         />
         <meta name="author" content="Manoj Gowda" />
+        <link rel="canonical" href="https://manojgowda.in/skills" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Skills & Expertise | Manoj Gowda - Full Stack Developer & DevOps Engineer"
+        />
+        <meta
+          property="og:description"
+          content="Discover Manoj Gowda's technical skills across frontend, backend, databases, DevOps, and cloud solutions. Includes MERN stack, React, Node.js, Docker, AWS, and npm packages like mbqueue and cobit."
+        />
+        <meta property="og:url" content="https://manojgowda.in/skills" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Skills & Expertise | Manoj Gowda - Full Stack Developer & DevOps Engineer"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore Manoj Gowda's technical skills in MERN stack, React, Node.js, databases, DevOps, cloud computing, and open-source npm packages like mbqueue and cobit."
+        />
       </Helmet>
 
       <div className="container">
@@ -96,7 +128,7 @@ const Skills = () => {
                       className="skill-badge"
                       style={{
                         "--skill-color": skill.color,
-                        animationDelay: `${skillIndex * 0.1}s`
+                        animationDelay: `${skillIndex * 0.1}s`,
                       }}
                     >
                       <div
