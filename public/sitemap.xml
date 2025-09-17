@@ -42,6 +42,11 @@
     <priority>0.7</priority>
     <changefreq>yearly</changefreq>
   </url>
+   <url>
+    <loc>https://manojgowda.in/mbqueue</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
   <!-- External Link Pages -->
   <url>
