@@ -1,52 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Skills from "./pages/Skills";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 import "./App.css";
-import Github from "./pages/Links/Github";
-import Linkedin from "./pages/Links/Linkedin";
-import Whatsapp from "./pages/Links/Whatsapp";
-import Instagram from "./pages/Links/Instagram";
-import Blogs from "./pages/Blogs";
-import BlogDetail from "./pages/BlogDetail";
-// Component for confirmation before redirecting
-function PermissionRedirect({ to }) {
-  const [showButton, setShowButton] = useState(true);
 
-  const handleRedirect = () => {
-    window.open(to, "_blank"); // open in new tab
-    setShowButton(false);
-  };
-
-  return (
-    <div style={{ padding: "2rem", textAlign: "center" }}>
-      {showButton ? (
-        <>
-          <p>Click the button below to visit the external link:</p>
-          <button
-            onClick={handleRedirect}
-            style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
-          >
-            Go to Link
-          </button>
-        </>
-      ) : (
-        <p>Redirected! You can close this tab.</p>
-      )}
-    </div>
-  );
-}
+// 🔹 Lazy imports
+const Home = lazy(() => import("./pages/Home"));
+const Skills = lazy(() => import("./pages/Skills"));
+const Experience = lazy(() => import("./pages/Experience"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Blogs = lazy(() => import("./pages/Blogs"));
+const BlogDetail = lazy(() => import("./pages/BlogDetail"));
+const Github = lazy(() => import("./pages/Links/Github"));
+const Linkedin = lazy(() => import("./pages/Links/Linkedin"));
+const Whatsapp = lazy(() => import("./pages/Links/Whatsapp"));
+const Instagram = lazy(() => import("./pages/Links/Instagram"));
 
 // Component that downloads resume from /public
 function ResumeDownload() {
   useEffect(() => {
     const link = document.createElement("a");
-    link.href = "/manojgowda.in.pdf"; // file must be inside /public
-    link.download = "manojgowda.in.pdf"; // suggested filename
+    link.href = "/manojgowda.in.pdf";
+    link.download = "manojgowda.in.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -62,6 +41,21 @@ function ResumeDownload() {
         </a>
         .
       </p>
+    </div>
+  );
+}
+
+// Layout wrapper with Navbar
+function Layout({ theme, toggleTheme }) {
+  return (
+    <div className="app">
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <main className="main-content">
+        {/* ✅ Use Suspense + Outlet */}
+        <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
+          <Outlet />
+        </Suspense>
+      </main>
     </div>
   );
 }
@@ -82,32 +76,37 @@ function App() {
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
-  return (
-    <Router>
-      <div className="app">
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <main className="main-content">
-          <Routes>
-            {/* Internal pages */}
-            <Route path="/" element={<Home />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blogs/:id" element={<BlogDetail />} />
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout theme={theme} toggleTheme={toggleTheme} />,
+      children: [
+        { index: true, element: <Home /> }, // ✅ use index instead of "/"
+        { path: "skills", element: <Skills /> },
+        { path: "experience", element: <Experience /> },
+        { path: "projects", element: <Projects /> },
+        { path: "contact", element: <Contact /> },
+        { path: "blogs", element: <Blogs /> },
+        { path: "blogs/:id", element: <BlogDetail /> },
+        { path: "github", element: <Github /> },
+        { path: "linkedin", element: <Linkedin /> },
+        { path: "whatsapp", element: <Whatsapp /> },
+        { path: "instagram", element: <Instagram /> },
+        { path: "resume", element: <ResumeDownload /> },
+        {
+          path: "*",
+          element: (
+            <div style={{ padding: "2rem", textAlign: "center" }}>
+              <h2>404 - Page Not Found</h2>
+              <a href="/">Go Home</a>
+            </div>
+          ),
+        },
+      ],
+    },
+  ]);
 
-            {/* External links with permission */}
-            <Route path="/github" element={<Github />} />
-            <Route path="/linkedin" element={<Linkedin />} />
-            <Route path="/whatsapp" element={<Whatsapp />} />
-            <Route path="/instagram" element={<Instagram />} />
-            <Route path="/resume" element={<ResumeDownload />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
