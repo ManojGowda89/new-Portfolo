@@ -19,7 +19,7 @@ const Github = lazy(() => import("./pages/Links/Github"));
 const Linkedin = lazy(() => import("./pages/Links/Linkedin"));
 const Whatsapp = lazy(() => import("./pages/Links/Whatsapp"));
 const Instagram = lazy(() => import("./pages/Links/Instagram"));
-const Mbqueue = lazy(() => import("./pages/mbqueue"));
+const Mbqueue = lazy(() => import("./pages/Mbqueue"));
 // Component that downloads resume from /public
 function ResumeDownload() {
   useEffect(() => {
